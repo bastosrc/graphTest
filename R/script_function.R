@@ -1,0 +1,63 @@
+
+library(ggplot2)
+library(ggforce)
+library(vegan)
+
+######### Criando a fun??o #########
+plotvarpart=function(x, x1="X1", x2="X2", resi="Residuals", colour="grey", fill=NA, grad="/", fill1="white", fill2="black", font="serif"){
+  values<-round(x$part$indfract$Adj.R.squared, 2)
+  paleta<-data.frame(x=c(0,2.5), y=c(0,0),labels=c(100,0))
+  dados1<-data.frame(x=c(0,2.5), y=c(0,0),labels=c(values[1]*100,values[3]*100))
+
+if(missing(resi)){
+    resi<-paste("Residuals =", values[4], sep=" ")}
+else{
+    resi<-paste(resi,"=", values[4], sep=" ")}
+
+show(
+    if(missing(grad)||grad==TRUE){
+      ggplot(paleta, aes(x0 = x, y0 = y, r = 2, fill = labels))+
+        geom_circle(alpha = 0)+
+        geom_circle(data=dados1, aes(x0=x, y0=y, fill=labels), alpha=0.6, size = 1, colour = colour, show.legend=F)+ coord_fixed()+
+        scale_fill_gradient(low = fill1, high = fill2)+ # Aqui voc? pode mudar as cores.
+        theme_void()+
+        theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
+        legend.text=element_text(family=font, size=12))+
+        labs(fill=expression(R^2))+
+        annotate("text", x=-0.6, y=0, label=if((values[1]>=0)==TRUE){values[1]}else{},
+        family=font, size=6)+
+        annotate("text", x=1.3, y=0, label=if((values[2]>=0)==TRUE){values[2]}else{},
+        family=font, size=6)+
+        annotate("text", x=3.1, y=0, label=if((values[3]>=0)==TRUE){values[3]}else{},
+        family=font, size=6)+
+        annotate("text", x=0, y=2.3, label=x1, family=font, size=6)+
+        annotate("text", x=2.5, y=2.3, label=x2, family=font, size=6)+
+        annotate("text", x=3, y=-2.5, label=resi, family=font, size=6)
+}else{
+
+      ggplot(paleta, aes(x0 = x, y0 = y, r = 2))+
+        geom_circle(alpha=0.6, size = 1, fill=fill, colour = "black", show.legend=F)+ coord_fixed()+
+        theme_void()+
+        theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
+        legend.text=element_text(family=font, size=12))+
+        labs(fill=expression(R^2))+
+        annotate("text", x=-0.6, y=0, label=if((values[1]>=0)==TRUE){values[1]}else{},
+        family=font, size=6)+
+        annotate("text", x=1.3, y=0, label=if((values[2]>=0)==TRUE){values[2]}else{},
+        family=font, size=6)+
+        annotate("text", x=3.1, y=0, label=if((values[3]>=0)==TRUE){values[3]}else{},
+        family=font, size=6)+
+        annotate("text", x=0, y=2.3, label=x1, family=font, size=6)+
+        annotate("text", x=2.5, y=2.3, label=x2, family=font, size=6)+
+        annotate("text", x=3, y=-2.5, label=resi, family=font, size=6)
+})
+return("Values <0 not shown")
+}
+##########################################
+
+
+plotvarpart(pRDA.res) # Objeto de classe varpart
+
+
+
+
