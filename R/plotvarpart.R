@@ -16,7 +16,6 @@
 #' @return The object of class ggplot
 #' @author Rafael Costa Bastos
 #' @examples
-#' library(plotvarpart)
 #' data(mite)
 #' data(mite.env)
 #' data(mite.pcnm)
