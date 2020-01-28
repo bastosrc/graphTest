@@ -1,0 +1,15 @@
+Package: graphTest
+Title:
+Version: 1.0.0
+
+Authors:
+    person(given = "Rafael C.B.",
+           family = "Bastos",
+           role = c("aut", "cre"),
+           email = "bastorc.bio@gmail.com",
+           comment = c(ORCID = "0000-0001-7581-7099"))))
+Description: The package has a function able to create Venn diagrams using objects of class varpart. That function can make diagrams showing the variance partition in a colors gradient.
+License: GPL-3
+Depends: R (>= 3.5.0)
+LazyData: TRUE
+Imports: ggplot2, ggforce
