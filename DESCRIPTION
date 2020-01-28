@@ -7,3 +7,4 @@ License: GPL-3
 Depends: R (>= 3.5.0)
 LazyData: TRUE
 Imports: ggplot2, ggforce
+RoxygenNote: 7.0.2
