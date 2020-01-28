@@ -1,7 +1,7 @@
 Package: graphTest
 Title: Creat and formatation of Venn diagrams to objects of class varpart
 Version: 1.0.0
-Authors: 
+Authors@R: 
   person(given = "Rafael C.B.", 
   family = "Bastos", role = c("aut", "cre"), 
   email = "bastorc.bio@gmail.com", 
