@@ -1,9 +1,4 @@
 
-library(ggplot2)
-library(ggforce)
-library(vegan)
-
-######### Criando a fun??o #########
 plotvarpart=function(x, x1="X1", x2="X2", resi="Residuals", colour="grey", fill=NA, grad="/", fill1="white", fill2="black", font="serif"){
   values<-round(x$part$indfract$Adj.R.squared, 2)
   paleta<-data.frame(x=c(0,2.5), y=c(0,0),labels=c(100,0))
@@ -53,10 +48,7 @@ show(
 })
 return("Values <0 not shown")
 }
-##########################################
 
-
-plotvarpart(pRDA.res) # Objeto de classe varpart
 
 
 
