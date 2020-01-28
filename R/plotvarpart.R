@@ -16,7 +16,7 @@
 #' @return The object of class ggplot
 #' @author Rafael Costa Bastos
 #' @seealso \code{\link[vegan]{showvarpart}}
-#' @example
+#' @examples
 #' mod <- varpart(mite, mite.env, mite.pcnm, transfo="hel")
 #' plotvarpart(mod, grad=T)
 #' @export
