@@ -74,8 +74,3 @@ show(
 })
 return("Values <0 not shown")
 }
-
-
-
-
-
