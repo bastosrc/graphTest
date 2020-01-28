@@ -15,7 +15,6 @@
 #' @param font Change the texts family in graph
 #' @return The object of class ggplot
 #' @author Rafael Costa Bastos
-#' @seealso \link[vegan]{showvarpart}
 #' @examples
 #' library(plotvarpart)
 #' data(mite)
