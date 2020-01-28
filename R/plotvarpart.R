@@ -1,8 +1,8 @@
 #' @title Create Venn driagrams graph
 #' @name plotvarpart
 #' @description Function to create graphs type Ven diagram using objects of
-#'   class varpart. The function has one argument that you to use to make graphs
-#'   that show the variance partition in a colors gradient.
+#' class varpart. The function has one argument that you to use to make graphs
+#' that show the variance partition in a colors gradient.
 #' @param x One object of class varpart
 #' @param x1 Partition name
 #' @param x2 Other partition name
@@ -15,8 +15,12 @@
 #' @param font Change the texts family in graph
 #' @return The object of class ggplot
 #' @author Rafael Costa Bastos
-#' @seealso \code{\link[vegan]{showvarpart}}
+#' @seealso \link[vegan]{showvarpart}
 #' @examples
+#' library(plotvarpart)
+#' data(mite)
+#' data(mite.env)
+#' data(mite.pcnm)
 #' mod <- varpart(mite, mite.env, mite.pcnm, transfo="hel")
 #' plotvarpart(mod, grad=T)
 #' @export
