@@ -16,12 +16,14 @@
 #' @return The object of class ggplot
 #' @author Rafael Costa Bastos
 #' @examples
-#' library(vegan)
+#' require(vegan)
+#' require(ggplot2)
+#' require(ggforce)
 #' data(mite)
 #' data(mite.env)
 #' data(mite.pcnm)
 #' mod <- varpart(mite, mite.env, mite.pcnm, transfo="hel")
-#' plotvarpart(mod, grad=T)
+#' plotvarpart(mod)
 #' @export
 #'
 plotvarpart=function(x, x1="X1", x2="X2", resi="Residuals",

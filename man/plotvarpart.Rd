@@ -47,12 +47,14 @@ class varpart. The function has one argument that you to use to make graphs
 that show the variance partition in a colors gradient.
 }
 \examples{
-library(vegan)
+require(vegan)
+require(ggplot2)
+require(ggforce)
 data(mite)
 data(mite.env)
 data(mite.pcnm)
 mod <- varpart(mite, mite.env, mite.pcnm, transfo="hel")
-plotvarpart(mod, grad=T)
+plotvarpart(mod)
 }
 \author{
 Rafael Costa Bastos
