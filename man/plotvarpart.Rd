@@ -43,11 +43,16 @@ The object of class ggplot
 }
 \description{
 Function to create graphs type Ven diagram using objects of
-  class varpart. The function has one argument that you to use to make graphs
-  that show the variance partition in a colors gradient.
+class varpart. The function has one argument that you to use to make graphs
+that show the variance partition in a colors gradient.
 }
-\seealso{
-\code{\link[vegan]{showvarpart}}
+\examples{
+library(plotvarpart)
+data(mite)
+data(mite.env)
+data(mite.pcnm)
+mod <- varpart(mite, mite.env, mite.pcnm, transfo="hel")
+plotvarpart(mod, grad=T)
 }
 \author{
 Rafael Costa Bastos
