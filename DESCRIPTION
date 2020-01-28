@@ -2,7 +2,7 @@ Package: graphTest
 Title: Creat and formatation of Venn diagrams to objects of class varpart
 Version: 1.0.0
 Authors@R: 
-  person("Rafael" "Bastos", role = c("aut", "cre"), 
+  person("Rafael", "Bastos", role = c("aut", "cre"), 
   email = "bastorc.bio@gmail.com", 
   comment = ORCID = "0000-0001-7581-7099")
 Description: The package has a function able to create Venn diagrams using objects of class varpart. That function can make diagrams showing the variance partition in a colors gradient.
