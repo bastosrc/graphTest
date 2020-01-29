@@ -18,28 +18,28 @@ plotvarpart(
 )
 }
 \arguments{
-\item{x}{One object of class varpart}
+\item{x}{One object of class varpart.}
 
-\item{x1}{Partition name}
+\item{x1}{Partition name.}
 
-\item{x2}{Other partition name}
+\item{x2}{Other partition name.}
 
-\item{resi}{Risduals name}
+\item{resi}{Risduals name.}
 
-\item{colour}{Circle colour}
+\item{colour}{Circle colour.}
 
-\item{fill}{Circle fill}
+\item{fill}{Circle fill.}
 
-\item{grad}{Logical argument to indicate if the graph must be in gradient}
+\item{grad}{Logical argument to indicate if the graph must be in gradient.}
 
-\item{fill1}{Circle fill if it be in gradient. To the minor values}
+\item{fill1}{Circle fill if it be in gradient. To the minor values.}
 
-\item{fill2}{Circle fill if it be in gradient. To the major values}
+\item{fill2}{Circle fill if it be in gradient. To the major values.}
 
-\item{font}{Change the texts family in graph}
+\item{font}{Change the texts family in graph.}
 }
 \value{
-The object of class ggplot
+The function will return a graphic type Venn diagram.
 }
 \description{
 Function to create graphs type Ven diagram using objects of

@@ -3,17 +3,17 @@
 #' @description Function to create graphs type Ven diagram using objects of
 #' class varpart. The function has one argument that you to use to make graphs
 #' that show the variance partition in a colors gradient.
-#' @param x One object of class varpart
-#' @param x1 Partition name
-#' @param x2 Other partition name
-#' @param resi Risduals name
-#' @param colour Circle colour
-#' @param fill Circle fill
-#' @param grad Logical argument to indicate if the graph must be in gradient
-#' @param fill1 Circle fill if it be in gradient. To the minor values
-#' @param fill2 Circle fill if it be in gradient. To the major values
-#' @param font Change the texts family in graph
-#' @return The object of class ggplot
+#' @param x One object of class varpart.
+#' @param x1 Partition name.
+#' @param x2 Other partition name.
+#' @param resi Risduals name.
+#' @param colour Circle colour.
+#' @param fill Circle fill.
+#' @param grad Logical argument to indicate if the graph must be in gradient.
+#' @param fill1 Circle fill if it be in gradient. To the minor values.
+#' @param fill2 Circle fill if it be in gradient. To the major values.
+#' @param font Change the texts family in graph.
+#' @return The function will return a graphic type Venn diagram.
 #' @author Rafael Costa Bastos
 #' @examples
 #' require(vegan)
