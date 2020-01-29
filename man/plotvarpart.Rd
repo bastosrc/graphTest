@@ -30,7 +30,7 @@ plotvarpart(
 
 \item{fill}{Circle fill.}
 
-\item{grad}{Logical argument to indicate if the graph must be in gradient. The default is \cod{TRUE}.}
+\item{grad}{Logical argument to indicate if the graph must be in gradient. The default is \code{TRUE}.}
 
 \item{fill1}{Circle fill if it be in gradient. To the minor values.}
 
