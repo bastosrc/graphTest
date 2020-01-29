@@ -9,7 +9,7 @@
 #' @param resi Risduals name.
 #' @param colour Circle colour.
 #' @param fill Circle fill.
-#' @param grad Logical argument to indicate if the graph must be in gradient.
+#' @param grad Logical argument to indicate if the graph must be in gradient. The default is \cod{TRUE}.
 #' @param fill1 Circle fill if it be in gradient. To the minor values.
 #' @param fill2 Circle fill if it be in gradient. To the major values.
 #' @param font Change the texts family in graph.
