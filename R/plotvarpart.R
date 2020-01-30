@@ -27,7 +27,7 @@
 #' @export
 #'
 plotvarpart=function(x, x1="X1", x2="X2", resi="Residuals",
-                     colour="grey", fill=NA, grad="/", fill1="white",
+                     colour=fill1, fill=NA, grad="/", fill1="white",
                      fill2="black", font="serif"){
 
 values<-round(x$part$indfract$Adj.R.squared, 2)
