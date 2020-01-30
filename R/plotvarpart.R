@@ -63,7 +63,7 @@ if(missing(grad)||grad==TRUE){
 }else{
 
       ggplot(paleta, aes(x0 = x, y0 = y, r = 2))+
-        geom_circle(alpha=0.6, size = 1, fill=fill, colour = "black", show.legend=F)+ coord_fixed()+
+        geom_circle(alpha=0.6, size = 1, fill=fill, colour = colour, show.legend=F)+ coord_fixed()+
         theme_void()+
         theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
         legend.text=element_text(family=font, size=12))+
