@@ -29,10 +29,11 @@
 plotvarpart=function(x, x1="X1", x2="X2", resi="Residuals",
                      colour=fill1, fill=NA, grad="/", fill1="gray",
                      fill2="black", font="serif"){
-
+library(ggplot2)
+library(ggforce)
 values<-round(x$part$indfract$Adj.R.squared, 2)
 paleta<-data.frame(x=c(0,2.5), y=c(0,0),labels=c(100,0))
-dados1<-data.frame(x=c(0,2.5), y=c(0,0),labels=c(values[1]*100,values[3]*100))
+dados<-data.frame(x=c(0,2.5), y=c(0,0),labels=c(values[1]*100,values[3]*100))
 
 if(missing(resi)){
     resi<-paste("Residuals =", values[4], sep=" ")}
@@ -44,8 +45,8 @@ show(
 if(missing(grad)||grad==TRUE){
       ggplot(paleta, aes(x0 = x, y0 = y, r = 2, fill = labels))+
         geom_circle(alpha = 0)+
-        geom_circle(data=dados1, aes(x0=x, y0=y, fill=labels), alpha=0.6, size = 1, colour = colour, show.legend=F)+ coord_fixed()+
-        scale_fill_gradient(low = fill1, high = fill2)+ # Aqui voc? pode mudar as cores.
+        geom_circle(data=dados, aes(x0=x, y0=y, fill=labels), alpha=0.6, size = 1, colour = colour, show.legend=F)+ coord_fixed()+
+        scale_fill_gradient(low = fill1, high = fill2)+ 
         theme_void()+
         theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
         legend.text=element_text(family=font, size=12))+
@@ -62,7 +63,7 @@ if(missing(grad)||grad==TRUE){
 
 }else{
 
-      ggplot(paleta, aes(x0 = x, y0 = y, r = 2))+
+      ggplot(dados, aes(x0 = x, y0 = y, r = 2))+
         geom_circle(alpha=0.6, size = 1, fill=fill, colour = colour, show.legend=F)+ coord_fixed()+
         theme_void()+
         theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
