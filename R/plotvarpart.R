@@ -78,7 +78,6 @@ if(missing(grad)||grad==TRUE){
         annotate("text", x=0, y=2.3, label=x1, family=font, size=6)+
         annotate("text", x=2.5, y=2.3, label=x2, family=font, size=6)+
         annotate("text", x=3, y=-2.5, label=resi, family=font, size=6)
-}
-)
+})
 return("Values <0 not shown")
 }
