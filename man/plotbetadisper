@@ -6,7 +6,7 @@
 \usage{
 plotbetadisper(
   x
-  )
+)
 }
 \arguments{
 \item{x}{One object of class betadisper.}
