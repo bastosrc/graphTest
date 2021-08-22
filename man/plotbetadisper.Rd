@@ -13,7 +13,7 @@ plotbetadisper(x)
 The function will return a ordinaition of ggplot class.
 }
 \description{
-Function to create graphs of betadisper class. The function has one argument that you to use to make graphs of ordination type.
+Function to create PERMDISP graphs using ggplot2. The function has one argument that you to use to make graphs of ordination type.
 }
 \examples{
 require(vegan)
