@@ -4,9 +4,7 @@
 \alias{plotbetadisper}
 \title{Plot a betadisper object}
 \usage{
-plotbetadisper(
-  x
-)
+plotbetadisper(x)
 }
 \arguments{
 \item{x}{One object of class betadisper.}
