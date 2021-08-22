@@ -31,7 +31,7 @@ library(ggConvexHull)
 ######## Dividindo a tabela, para criar as setas e centróides.
 trat1<-ord2[1:sum(ifelse((ord[,3]==(levels(ord[,3])[1]))==TRUE,1,0)),]
 trat2<-ord2[(1+nrow(trat1)):(sum(ifelse((ord[,3]==(levels(ord[,3])[1]))==TRUE,1,0))+sum(ifelse((ord[,3]==(levels(ord[,3])[2]))==TRUE,1,0))),]
-trat3<-ord2[(1+nrow(trat2)):nrow(ord2),]
+trat3<-ord2[(1+nrow(trat1)+nrow(trat2)):nrow(ord2),]
 
 ######## Plotando o gráfico.
 plot1<-ggplot(ord, aes(x=PCoA1, y=PCoA2, colour=ord[,3]))+
