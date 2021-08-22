@@ -43,7 +43,7 @@ else{
 show(
 
 if(missing(grad)||grad==TRUE){
-      ggplot(paleta, aes(x0 = x, y0 = y, r = 2, fill = labels))+
+      plot1<-ggplot(paleta, aes(x0 = x, y0 = y, r = 2, fill = labels))+
         geom_circle(alpha = 0)+
         geom_circle(data=dados, aes(x0=x, y0=y, fill=labels), alpha=0.6, size = 1, colour = colour, show.legend=F)+ coord_fixed()+
         scale_fill_gradient(low = fill1, high = fill2)+ 
@@ -63,7 +63,7 @@ if(missing(grad)||grad==TRUE){
 
 }else{
 
-      ggplot(dados, aes(x0 = x, y0 = y, r = 2))+
+      plot1<-ggplot(dados, aes(x0 = x, y0 = y, r = 2))+
         geom_circle(alpha=0.6, size = 1, fill=fill, colour = colour, show.legend=F)+ coord_fixed()+
         theme_void()+
         theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
@@ -79,5 +79,5 @@ if(missing(grad)||grad==TRUE){
         annotate("text", x=2.5, y=2.3, label=x2, family=font, size=6)+
         annotate("text", x=3, y=-2.5, label=resi, family=font, size=6)
 })
-return("Values <0 not shown")
+return(plot1)
 }
