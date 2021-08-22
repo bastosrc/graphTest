@@ -1,4 +1,4 @@
-#' @title Plot a betadisper object. 
+#' @title Plot a betadisper object
 #' @name plotbetadisper
 #' @description Function to create graphs of betadisper class.
 #' The function has one argument that you to use to make graphs of ordination type.
@@ -22,18 +22,18 @@ library(ggConvexHull)
 	ord<-as.data.frame(x$vectors[,c(1,2)])
 		ord<-as.data.frame(cbind(ord, x$group))
 
-	ord2<-ord[order(ord[,3]),]# Classificando em ordem alfabética.
+	ord2<-ord[order(ord[,3]),]# Classificando em ordem alfabÃ©tica.
 	print(levels(ord2[,3]))
 	levels(ord2[,3])[1]
 	levels(ord2[,3])[2]
 	levels(ord2[,3])[3]
 
-######## Dividindo a tabela, para criar as setas e centróides.
+######## Dividindo a tabela, para criar as setas e centrÃ³ides.
 trat1<-ord2[1:sum(ifelse((ord[,3]==(levels(ord[,3])[1]))==TRUE,1,0)),]
 trat2<-ord2[(1+nrow(trat1)):(sum(ifelse((ord[,3]==(levels(ord[,3])[1]))==TRUE,1,0))+sum(ifelse((ord[,3]==(levels(ord[,3])[2]))==TRUE,1,0))),]
 trat3<-ord2[(1+nrow(trat2)):nrow(ord2),]
 
-######## Plotando o gráfico.
+######## Plotando o grÃ¡fico.
 plot1<-ggplot(ord, aes(x=PCoA1, y=PCoA2, colour=ord[,3]))+
 	theme_test(base_family="serif", base_size=18)+
 	theme(panel.border = element_rect(size=2, fill = NA))+
