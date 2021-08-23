@@ -1,4 +1,4 @@
-#' @title Plot a betadisper object
+#' @title Ordenation from an object of the betadisper class. 
 #' @name plotbetadisper
 #' @description Function to create PERMDISP graphs using ggplot2.
 #' The function has one argument that you to use to make graphs of ordination type.
