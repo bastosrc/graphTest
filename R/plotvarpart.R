@@ -51,11 +51,11 @@ if(missing(grad)||grad==TRUE){
         theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
         legend.text=element_text(family=font, size=12))+
         labs(fill=expression(R^2))+
-        annotate("text", x=-0.6, y=0, label=if((values[1]>=0)==TRUE){values[1]}else{},
+        annotate("text", x=-0.6, y=0, label=if((values[1]>0)==TRUE){values[1]}else{},
         family=font, size=6)+
-        annotate("text", x=1.3, y=0, label=if((values[2]>=0)==TRUE){values[2]}else{},
+        annotate("text", x=3.2, y=0, label=if((values[2]>=0)==TRUE){values[2]}else{},
         family=font, size=6)+
-        annotate("text", x=3.1, y=0, label=if((values[3]>=0)==TRUE){values[3]}else{},
+        annotate("text", x=1.3, y=0, label=if((values[3]>=0)==TRUE){values[3]}else{},
         family=font, size=6)+
         annotate("text", x=0, y=2.3, label=x1, family=font, size=6)+
         annotate("text", x=2.5, y=2.3, label=x2, family=font, size=6)+
@@ -69,11 +69,11 @@ if(missing(grad)||grad==TRUE){
         theme(legend.position="top", legend.title=element_text(family=font, size=15, face="bold"),
         legend.text=element_text(family=font, size=12))+
         labs(fill=expression(R^2))+
-        annotate("text", x=-0.6, y=0, label=if((values[1]>=0)==TRUE){values[1]}else{},
+        annotate("text", x=-0.6, y=0, label=if((values[1]>0)==TRUE){values[1]}else{},
         family=font, size=6)+
-        annotate("text", x=1.3, y=0, label=if((values[2]>=0)==TRUE){values[2]}else{},
+        annotate("text", x=3.1, y=0, label=if((values[2]>=0)==TRUE){values[2]}else{},
         family=font, size=6)+
-        annotate("text", x=3.1, y=0, label=if((values[3]>=0)==TRUE){values[3]}else{},
+        annotate("text", x=1.3, y=0, label=if((values[3]>=0)==TRUE){values[3]}else{},
         family=font, size=6)+
         annotate("text", x=0, y=2.3, label=x1, family=font, size=6)+
         annotate("text", x=2.5, y=2.3, label=x2, family=font, size=6)+
