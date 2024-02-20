@@ -35,7 +35,7 @@ trat3<-ord2[(1+nrow(trat1)+nrow(trat2)):nrow(ord2),]
 
 ######## Plotando o gráfico.
 plot1<-ggplot(ord, aes(x=PCoA1, y=PCoA2, colour=ord[,3]))+
-	theme_bw(base_family="serif", base_size=18)+
+	theme_test(base_family="serif", base_size=18)+
 	theme(panel.border = element_rect(size=1, fill = NA))+
 	guides(colour="none")+
 	geom_convexhull(alpha=0, size=1)
